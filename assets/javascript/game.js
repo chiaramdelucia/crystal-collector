@@ -25,6 +25,8 @@ $(document).ready(function() {
 		crystal2 = Math.floor(Math.random() * 12) + 1;
 		crystal3 = Math.floor(Math.random() * 12) + 1;
 		crystal4 = Math.floor(Math.random() * 12) + 1;
+		crystalTotal = 0;
+
 
 
 		//Add + assign to HTML elements
@@ -33,6 +35,7 @@ $(document).ready(function() {
 		$(".2").data("crystal2");
 		$(".3").data("crystal2");
 		$(".4").data("crystal2");
+		$(".userScore").html(crystalTotal);
 
 			// $(".1").click(function () {
 			// 	$(".userScore").val( function( ) {
@@ -67,6 +70,7 @@ $(document).ready(function() {
   			$(".userScore").html(crystalTotal);
   			checkScore ();
 
+
   		
   		})
   		$(".2").on("click", function () {
@@ -97,17 +101,17 @@ $(document).ready(function() {
   			winCount++;
   			$(".win").html(winCount);
   			alert("You Win!");
-  			//startGame();
+  			startGame();
   		}
 
-  		if (crystalTotal > randomNumber){
+  		else if (crystalTotal > randomNumber){
   			lossCount++;
   			$(".lose").html(lossCount);
   			alert("You lose.");
-  			//startGame ();
+  			startGame ();
   		}
 
-  		startGame ();
+  		//startGame ();
   	}
 
 
@@ -117,12 +121,12 @@ $(document).ready(function() {
 
 //startGame ();
 
-	document.onkeyup = (function(e) {
-		if (e.keyCode == '32') {
+	// document.onkeyup = (function(e) {
+	// 	if (e.keyCode == '32') {
 	    	startGame();
 	    	userTotal ();
 	    	//crystalValues();
-		}
-	})
+// 		}
+// 	})
 
 });
