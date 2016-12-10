@@ -1,0 +1,58 @@
+body {
+	color: white;
+/*	font-family: 'Merriweather Sans', sans-serif;*/
+	font-size: 20px;
+	font-family: 'Aref Ruqaa', serif;
+
+}
+	
+
+.caveBackground{
+	background-image: url(../images/cave-background-2.png);
+	height: 1100px;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+	height: 150px;
+	text-align: center;
+	font-family: 'Aref Ruqaa', serif;
+	font-size: 100px;
+
+}
+
+
+.rules {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Sahitya', serif;
+	
+}
+
+
+.panel{
+	background-color: transparent; 
+	border-style: none;
+	text-align: center;
+	
+}
+
+.random {
+	height: 100px;
+	margin-top: 50px;
+}
+
+.crystal{
+	height: 50px;
+
+}
+
+.btn {
+	border-style: double;
+	border-width: 4px;
+	border-color: black;
+	border-radius: 1px 10px ;
+}

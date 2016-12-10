@@ -1,46 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
 	<meta charset="UTF-8">
-	<title>Cyrstal Collector</title>
+	<title>Cyrstals Collector</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+	<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Sahitya" rel="stylesheet">	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
-<container>
-	<div class="panel panel-default">
-  		<div class="panel-body random">
-    		Random Comp Generated Number
-  		</div>
-	</div>
-	<div class="panel panel-default">
-  		<div class="panel-body">
-    		<p>Wins<span class = "win"></span> </p>
-    		<br>
-    		<p> Losses<span class = "lose"></span> </p>
-  		</div>
-	</div>
-	<div class="panel panel-default">
-  		<div class="panel-body">
-    		Crystals
-  		</div>
-  		<div class="btn-group" role="group" aria-label="...">
-  			<button type="button" class="btn btn-default 1">Crystal 1</button>
-			<button type="button" class="btn btn-default 2">Crystal 2</button>
-			<button type="button" class="btn btn-default 3">Crystal 3</button>
-			<button type="button" class="btn btn-default 4">Crystal 4</button>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+ -->
+
+
+<div class = "container-fluid caveBackground">
+	<div class = "row">
+		<div class = "col-md-12">
+			<h1>Crystal Collector!</h1>
 		</div>
 	</div>
-	<div class="panel panel-default">
+
+	<div class = "row">
+		  	<div class ="col-md-12 rules"> <button type="button" class="btn btn-info rules" data-toggle="collapse" data-target="#demo">Rules</button>
+				<div id="demo" class="collapse">
+				   	You will be given a random number at the start of the game.
+					  
+					<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+					 
+					<p>You win the game by matching your total score to the randomly generated number; you lose the game if your total score goes above the random number.</p>
+					 
+					<p>The value of each crystal is hidden from you until you click on it.</p>
+					  
+					<p>When the game begins again, the value of the crystals will change.</p>
+					
+					<p>Have fun!</p>
+			  	</div>
+		  	</div>
+  	</div>
+
+
+	<div class="row random">
+		<div class="col-md-12 panel panel-default">
+				<div class="panel-body">
+				Randomly Generated Number:
+				<br>
+				<span class="randomNum"></span>
+				</div>
+		</div>
+	</div>
+
+<!-- Crystals -->
+	<div class="panel panel-default crystalButtons">
+  		<div class="panel-body">	
+  	</div>
+  		<!-- <div class="btn-group" role="group" aria-label="..."> -->
+
+  			<!-- <audio id="mysoundclip" preload="auto">
+   				<source src="https://www.freesound.org/people/bradwesson/sounds/135936/#"></source>
+			</audio> -->
+			<!-- <button type="button" class="ci">play</button> -->
+  			<button type="button" class="btn btn-default 1"><img class = "crystal" src="./assets/images/crystal-1.png" /></button>
+			<button type="button" class="btn btn-default 2"><img class = "crystal" src="./assets/images/crystal-2.png" /></button>
+			<button type="button" class="btn btn-default 3"><img class = "crystal" src="./assets/images/crystal-3.png" /></button>
+			<button type="button" class="btn btn-default 4"><img class = "crystal" src="./assets/images/crystal-4.png" /></button>
+
+		<!-- </div> -->
+	</div>
+
+	<div class="panel panel-default scorePanel">
   		<div class="panel-body">
-    		User score
+    		Your Total Score:
     		<br>
-    		<div class ="userScore" input type = reset></div>
+    		<div class ="userScore"></div>
   		</div>
 	</div>
-</container>
+
+	<div class="row">
+		<div class="col-md-12 panel panel-default">
+				<div class="panel-body">
+				<p class = "win">Wins: </p>
+				<br>
+				<p class = "lose"> Losses:</p>
+				</div>
+		</div>
+	</div>
+
+</div>
+
 	
 </body>
+
 <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
 <script src="assets/javascript/game.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </html>

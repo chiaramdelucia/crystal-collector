@@ -10,11 +10,16 @@ var crystalTotal = 0;
 
 var winCount = 0;
 var lossCount = 0;
+var audio = new Audio ("./assets/javascript/coin.wav");
+
+
+
 
 
 //Functions + Conditional Statements
 //=========================================================================================================================
 $(document).ready(function() {
+
 	
 
 	function startGame (){
@@ -30,7 +35,7 @@ $(document).ready(function() {
 
 
 		//Add + assign to HTML elements
-		$(".random").html(randomNumber);
+		$(".randomNum").html(randomNumber);
 		$(".1").data("crystal1");
 		$(".2").data("crystal2");
 		$(".3").data("crystal2");
@@ -65,30 +70,28 @@ $(document).ready(function() {
 
   	function userTotal (){
   		$(".1").on("click", function () {
-  			
+  			audio.play();
   			crystalTotal += crystal1;
   			$(".userScore").html(crystalTotal);
+  			
   			checkScore ();
-
-
-  		
   		})
   		$(".2").on("click", function () {
-  			
+  			audio.play();
   			crystalTotal += crystal2;
   			$(".userScore").html(crystalTotal);
   			checkScore();
   		
   		})
   		$(".3").on("click", function () {
-  			
+  			audio.play();
   			crystalTotal += crystal3;
   			$(".userScore").html(crystalTotal);
   			checkScore();
   		
   		})
   		$(".4").on("click", function () {
-  			
+  			audio.play();
   			crystalTotal += crystal4;
   			$(".userScore").html(crystalTotal);
   			checkScore ();
@@ -96,36 +99,48 @@ $(document).ready(function() {
 
   	}
 
-  	function checkScore(){
+  	function checkScore() {
   		if (crystalTotal == randomNumber) {
+
+
   			winCount++;
-  			$(".win").html(winCount);
-  			alert("You Win!");
+  
+  			// $(".win").html("Wins: " + winCount);
+  			$(".win").append('<img src = "assets/images/Golden_Pick_Axe.png" height=50px />');
+
+  			var audioWin = new Audio ("./assets/javascript/levelwin2.mp3");
+  			audioWin.play();
+
   			startGame();
   		}
 
-  		else if (crystalTotal > randomNumber){
+  		else if (crystalTotal > randomNumber) {
   			lossCount++;
-  			$(".lose").html(lossCount);
-  			alert("You lose.");
-  			startGame ();
-  		}
 
-  		//startGame ();
-  	}
+  			// $(".lose").html("Losses: " + lossCount);
+  			$(".lose").append('<img src = "assets/images/coal.png" height=50px />');
+
+  			var audioLose = new Audio ("./assets/javascript/you-lose.wav");
+  			audioLose.play();		
+
+  			startGame ();
+  		};
+
+  		
+  	};
 
 
 
 //MAIN PROCESSES
 //=========================================================================================================================
-
+//document.body.style.backgroundImage = "url ('../images/cave-backgound-2.png')";
 //startGame ();
 
 	// document.onkeyup = (function(e) {
 	// 	if (e.keyCode == '32') {
 	    	startGame();
 	    	userTotal ();
-	    	//crystalValues();
+	    
 // 		}
 // 	})
 
