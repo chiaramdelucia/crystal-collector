@@ -10,7 +10,11 @@ Crystal Collector Game using jQuery
 
   * HTML5
   * CSS3
+  * Bootstrap
   * jQuery
+  
+
+Play [here](https://chiaramdelucia.github.io/crystal-collector/)!
   
   
   
