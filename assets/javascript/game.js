@@ -70,6 +70,7 @@ $(document).ready(function() {
 
   	function userTotal (){
   		$(".1").on("click", function () {
+        audio.currentTime = 0;
   			audio.play();
   			crystalTotal += crystal1;
   			$(".userScore").html(crystalTotal);
@@ -77,6 +78,7 @@ $(document).ready(function() {
   			checkScore ();
   		})
   		$(".2").on("click", function () {
+        audio.currentTime = 0;
   			audio.play();
   			crystalTotal += crystal2;
   			$(".userScore").html(crystalTotal);
@@ -84,6 +86,7 @@ $(document).ready(function() {
   		
   		})
   		$(".3").on("click", function () {
+        audio.currentTime = 0;
   			audio.play();
   			crystalTotal += crystal3;
   			$(".userScore").html(crystalTotal);
@@ -91,6 +94,7 @@ $(document).ready(function() {
   		
   		})
   		$(".4").on("click", function () {
+        audio.currentTime = 0;
   			audio.play();
   			crystalTotal += crystal4;
   			$(".userScore").html(crystalTotal);
@@ -109,6 +113,7 @@ $(document).ready(function() {
   			$(".win").append('<img src = "assets/images/Golden_Pick_Axe.png" height=50px />');
 
   			var audioWin = new Audio ("./assets/javascript/levelwin2.mp3");
+        audio.currentTime = 0;
   			audioWin.play();
 
   			startGame();
@@ -121,6 +126,7 @@ $(document).ready(function() {
   			$(".lose").append('<img src = "assets/images/coal.png" height=50px />');
 
   			var audioLose = new Audio ("./assets/javascript/you-lose.wav");
+        audio.currentTime = 0;
   			audioLose.play();		
 
   			startGame ();
